@@ -15,7 +15,7 @@ section{
 .puntajes{
     height: 20vh;
     display: flex;/*Elemento al lado del otro*/
-    justify-content: space-evenly;/*Organiza items que no usan todo el espacio en x para tener espacio antes, en medio y después*/
+    justify-content: space-around;/*Organiza items que no usan todo el espacio en x para tener espacio antes, en medio y después*/
     text-align: center;
     align-items: center;
 }
@@ -23,7 +23,7 @@ section{
     font-size: 40px;
 }
 .puntajes p{
-    padding: 10px;
+    padding: 8px;
     font-size: 25px;
 }
 .tablero{
@@ -42,6 +42,9 @@ section{
     border-color: #2C3333;
     border-radius: 50%;
     cursor: pointer;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
 }
 .tablero button img{
     height: 50px;
@@ -52,7 +55,7 @@ section{
     
 }
 .tablero button{
-    transition: background-color 0.3s linear 0.1s, border-color 0.3s linear 0.1s;
+    transition: background-color 0.13s linear .18s, border-color 0.13s linear .18s;
 }
 .tablero button:focus{
     outline:0;
@@ -69,28 +72,59 @@ section{
 .manos img{
     width: 250px;
 }
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 771px){
     .manos img{
-        width: 150px;
+        width: 110px;
     }
     .puntajes h2{
-        font-size: 18px;
+        font-size: 14px;
+        padding-left: 1px;
     }
     .resultado{
-        font-size: 28px;
+        font-size: 16px;
     }
     .tablero button{
-        width: 80px;
-        height: 80px;
+        width: 78px;
+        height: 78px;
     }
     .tablero button img{
         height: 40px;
+    }
+    footer{
+        font-size: 14px;
     }
 }
 @keyframes shake{
     0%{
         transform: translateY(0px);
     }
+    15%{
+        transform: translateY(-25px);
+    }
+    25%{
+        transform: translateY(0px);
+    }
+    35%{
+        transform: translateY(-25px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    65%{
+        transform: translateY(-25px);
+    }
+    75%{
+        transform: translateY(0px);
+    }
+    85%{
+        transform: translateY(-25px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.jugando .manos img{
+    animation: shake 2s ease;
 }
 footer{
     background-color: #2C3333;
