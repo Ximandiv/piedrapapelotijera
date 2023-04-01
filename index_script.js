@@ -40,7 +40,7 @@ function ableToClick(){
 
 const swalInicio = () =>{
     Swal.fire({
-        icon: 'question',
+        icon: 'info',
         title: 'Juguemos!',
         text: 'El primero a los 3 puntos en Piedra Papel o Tijera gana',
         confirmButtonText: 'Jugar',
