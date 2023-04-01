@@ -97,8 +97,8 @@ const ganadores = (puntajeUsuario, puntajeComputadora) =>{
 }
 const reinicio = () =>{
     resultado.textContent = "Seleccione una opción";
-    manoComputadora.src = "./assets/piedra_computadora.png";
-    manoUsuario.src = "./assets/piedra_ada.png";
+    manoComputadora.src = "assets/piedra_computadora.png";
+    manoUsuario.src = "assets/piedra_ada.png";
 }
 
 const resul = () =>{
@@ -168,28 +168,28 @@ const IACOMPUTADORA = () =>{
     let RNG = Math.floor(Math.random()*3);
 
     if (RNG == 0){
-        manoComputadora.src = "./assets/piedra_computadora.png";
+        manoComputadora.src = "assets/piedra_computadora.png";
         eleccionComputadora = "piedra";
     } 
     else if (RNG == 1){
-        manoComputadora.src = "./assets/papel_computadora.png";
+        manoComputadora.src = "assets/papel_computadora.png";
         eleccionComputadora = "papel";
     } 
     else{
-        manoComputadora.src = "./assets/tijera_computadora.png";
+        manoComputadora.src = "assets/tijera_computadora.png";
         eleccionComputadora = "tijera";
     }
 }
 
 botonPiedra.onclick = () =>{
     unableToClick();
-    manoUsuario.src = "./assets/piedra_ada.png";
-    manoComputadora.src = "./assets/piedra_computadora.png";
+    manoUsuario.src = "assets/piedra_ada.png";
+    manoComputadora.src = "assets/piedra_computadora.png";
     resultado.textContent = "...";
     tablero.classList.add("jugando");
     setTimeout(() => {
         eleccionUsuario = "piedra";
-        manoUsuario.src = "./assets/piedra_ada.png";
+        manoUsuario.src = "assets/piedra_ada.png";
         IACOMPUTADORA();
         tablero.classList.remove("jugando");
         resul();
@@ -198,13 +198,13 @@ botonPiedra.onclick = () =>{
 
 botonTijera.onclick = () =>{
     unableToClick();
-    manoUsuario.src = "./assets/piedra_ada.png";
-    manoComputadora.src = "./assets/piedra_computadora.png";
+    manoUsuario.src = "assets/piedra_ada.png";
+    manoComputadora.src = "assets/piedra_computadora.png";
     resultado.textContent = "...";
     tablero.classList.add("jugando");
     setTimeout(() => {
         eleccionUsuario = "tijera";
-        manoUsuario.src = "./assets/tijera_ada.png";
+        manoUsuario.src = "assets/tijera_ada.png";
         IACOMPUTADORA();
         tablero.classList.remove("jugando");
         resul();
@@ -213,13 +213,13 @@ botonTijera.onclick = () =>{
 
 botonPapel.onclick = () =>{
     unableToClick();
-    manoUsuario.src = "./assets/piedra_ada.png";
-    manoComputadora.src = "./assets/piedra_computadora.png";
+    manoUsuario.src = "assets/piedra_ada.png";
+    manoComputadora.src = "assets/piedra_computadora.png";
     resultado.textContent = "...";
     tablero.classList.add("jugando");
     setTimeout(() => {
         eleccionUsuario = "papel";
-        manoUsuario.src = "./assets/papel_ada.png";
+        manoUsuario.src = "assets/papel_ada.png";
         IACOMPUTADORA();
         tablero.classList.remove("jugando");
         resul();
